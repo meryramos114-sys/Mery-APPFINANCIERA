@@ -1,0 +1,143 @@
+:root {
+    --cyan: #00f0ff;
+    --purple: #c300ff;
+    --green: #00ff9d;
+}
+
+body {
+    background: #0a0a0a;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(#0a0a0a 1px, transparent 1px),
+                linear-gradient(90deg, #0a0a0a 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(10, 10, 10, 0.95) !important;
+    border-bottom: 3px solid var(--cyan);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+/* Perfil navbar */
+.profile-container {
+    width: 52px;
+    height: 52px;
+    border: 3px solid var(--cyan);
+    border-radius: 50%;
+    padding: 3px;
+    background: #111;
+    box-shadow: 0 0 15px var(--cyan),
+                0 0 30px var(--purple);
+    animation: heartbeat 2s infinite;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Modal */
+.modal-content {
+    border: 3px solid var(--cyan);
+    box-shadow: 0 0 40px var(--cyan);
+}
+
+.modal-profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 6px double var(--purple);
+    box-shadow: 0 0 30px var(--green);
+}
+
+/* Tarjetas Cyberpunk */
+.card {
+    background: #111;
+    border: 2px solid var(--cyan);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 35px var(--purple);
+    border-color: var(--purple);
+}
+
+.card-header {
+    background: linear-gradient(90deg, #1a1a1a, #222);
+    border-bottom: 1px solid var(--green);
+}
+
+.rate-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cyan);
+    text-shadow: 0 0 15px var(--cyan);
+}
+
+/* Calculador */
+.calculator-master {
+    background: linear-gradient(135deg, #111, #1a1a1a);
+    border: 3px solid var(--purple);
+    box-shadow: 0 0 30px var(--purple);
+}
+
+/* Tech badges */
+.tech-badge {
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid var(--green);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    box-shadow: 0 0 10px var(--green);
+}
+
+/* Social buttons */
+.social-btn {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    background: #111;
+    color: #fff;
+    border: 2px solid var(--cyan);
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.social-btn:hover {
+    background: var(--cyan);
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Animación heartbeat */
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+}
+
+.text-cyan { color: var(--cyan); }
+.text-purple { color: var(--purple); }
+.text-green { color: var(--green); }
