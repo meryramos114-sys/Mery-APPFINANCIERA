@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💰 Finanzas DOP Cyber | Tasas en Tiempo Real</title>
+    
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Orbitron Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- ApexCharts CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold fs-3" href="#">
+                <span class="me-2">💰</span>
+                FINANZAS <span class="text-cyan">DOP</span> CYBER
+            </a>
+            
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <div onclick="showProfileModal()" class="profile-container cursor-pointer">
+                    <img id="profile-pic" src="https://i.pravatar.cc/512?u=juancitopena" alt="Juancito Peña" class="profile-pic">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5 mt-5">
+        <!-- Calculador Maestro -->
+        <div class="calculator-master mb-5 p-4 rounded-4 text-center">
+            <h2 class="fw-bold text-cyan mb-3">CALCULADOR MAESTRO</h2>
+            <div class="input-group input-group-lg mx-auto" style="max-width: 420px;">
+                <span class="input-group-text bg-dark text-light">RD$</span>
+                <input id="amount-input" type="number" class="form-control bg-dark text-light text-center fs-3" value="1000" placeholder="Monto en DOP">
+                <span class="input-group-text bg-dark text-light">DOP</span>
+            </div>
+            <p class="text-light-50 mt-2">Ingresa un monto en Pesos Dominicanos • Se actualiza en todas las tarjetas</p>
+        </div>
+
+        <!-- Grid de tarjetas -->
+        <div id="cards-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4"></div>
+    </div>
+
+    <!-- Modal Perfil -->
+    <div class="modal fade" id="profileModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark border-cyan">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center px-5">
+                    <img src="https://i.pravatar.cc/512?u=juancitopena" alt="Juancito Peña" class="modal-profile-pic mb-4">
+                    <h3 class="fw-bold text-cyan">Juancito Peña</h3>
+                    <h5 class="text-purple mb-4">Senior Fintech Developer</h5>
+                    
+                    <p class="text-light-50 lead">
+                        Senior Fintech Developer con más de 15 años de experiencia en el desarrollo de soluciones innovadoras. 
+                        Especializado en desarrollo Full-Stack, análisis de datos y aplicaciones de Inteligencia Artificial, 
+                        he liderado proyectos en instituciones financieras y startups tecnológicas en República Dominicana y la región.
+                    </p>
+                    <p class="text-light-50 lead">
+                        Mi trayectoria incluye la implementación de sistemas de pagos digitales, plataformas de trading 
+                        y herramientas de IA para análisis predictivo, combinando tecnologías modernas para optimizar 
+                        procesos y mejorar la experiencia del usuario.
+                    </p>
+
+                    <!-- Tech Stack -->
+                    <h5 class="text-cyan mt-5 mb-3">Tech Stack</h5>
+                    <div class="d-flex flex-wrap justify-content-center gap-2" id="tech-stack"></div>
+
+                    <!-- Redes sociales -->
+                    <div class="d-flex justify-content-center gap-3 mt-5">
+                        <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-github"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
