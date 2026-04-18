@@ -1,4 +1,4 @@
-const API_KEY = "PON_TU_API_KEY_AQUI";   // ←←← REEMPLAZA ESTO con tu clave real de ExchangeRate-API
+const API_KEY = "5d4fba854e4a3cadf9fe235c";   // ←←← REEMPLAZA ESTO con tu clave real de ExchangeRate-API
 
 const BASE_URL = 'https://v6.exchangerate-api.com/v6';
 const BASE_CURRENCY = 'DOP';
